@@ -1,93 +1,120 @@
-body {
-    font-family: Arial, sans-serif;
+* {
     margin: 0;
     padding: 0;
-    background: linear-gradient(45deg, #1a1a3d, #3d1a3d); /* Dark gradient background */
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    min-height: 100vh;
-    overflow: hidden; /* Prevents scroll */
+    box-sizing: border-box;
 }
 
-.folder-container {
-    perspective: 1200px; /* Deeper 3D effect */
+body {
+    font-family: 'Arial', sans-serif;
+    background: #f0f2f5;
+    color: #333;
+    line-height: 1.6;
+    scroll-behavior: smooth;
+    cursor: none; /* Hide default cursor */
 }
 
-.folder {
-    width: 450px;
-    background: linear-gradient(135deg, #ff6b6b, #4ecdc4, #45b7d1); /* Multi-color gradient */
-    border-radius: 15px;
-    box-shadow: 15px 15px 30px rgba(0, 0, 0, 0.5), inset 0 0 10px rgba(255, 255, 255, 0.2);
-    transform: rotateX(25deg) rotateY(-15deg); /* More pronounced 3D tilt */
-    transition: transform 0.5s ease, box-shadow 0.5s ease;
-    animation: float 4s infinite ease-in-out; /* Floating animation */
-}
-
-.folder:hover {
-    transform: rotateX(0deg) rotateY(0deg) scale(1.05); /* Zoom and flatten on hover */
-    box-shadow: 20px 20px 40px rgba(0, 0, 0, 0.7);
-}
-
-.folder-tab {
-    background: #fff;
-    padding: 15px 25px;
-    border-radius: 15px 15px 0 0;
-    font-size: 28px;
-    font-weight: bold;
-    text-align: center;
-    color: #ff6b6b;
-    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
-    transform: translateY(-10px); /* Slight lift */
-}
-
-.folder-content {
-    padding: 25px;
+.hero {
+    background: linear-gradient(135deg, #6b48ff, #00ddeb);
     color: #fff;
-    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.3);
+    text-align: center;
+    padding: 100px 20px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+}
+
+.hero h1 {
+    font-size: 48px;
+    margin-bottom: 10px;
+}
+
+.hero p {
+    font-size: 24px;
+}
+
+section {
+    max-width: 800px;
+    margin: 40px auto;
+    padding: 20px;
+    background: #fff;
+    border-radius: 10px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
 }
 
 h2 {
-    color: #fff;
-    margin: 10px 0;
-    font-size: 22px;
+    color: #6b48ff;
+    margin-bottom: 15px;
+    font-size: 28px;
 }
 
 ul {
-    list-style-type: disc;
-    padding-left: 20px;
+    list-style: none;
+    padding: 0;
 }
 
-p {
-    margin: 5px 0;
+ul li {
+    background: #f0f0f0;
+    margin: 10px 0;
+    padding: 10px;
+    border-radius: 5px;
+    transition: transform 0.3s ease;
 }
 
-/* Floating animation */
-@keyframes float {
-    0%, 100% { transform: rotateX(25deg) rotateY(-15deg) translateY(0); }
-    50% { transform: rotateX(25deg) rotateY(-15deg) translateY(-20px); }
+ul li:hover {
+    transform: translateX(10px);
 }
 
-/* Cursor styling */
+.projects .project-card {
+    background: #f9f9f9;
+    padding: 15px;
+    margin: 15px 0;
+    border-radius: 8px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.project-card:hover {
+    transform: scale(1.03);
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+}
+
+.project-card h3 {
+    color: #00ddeb;
+}
+
+.contact p {
+    margin: 10px 0;
+}
+
+.contact a {
+    color: #6b48ff;
+    text-decoration: none;
+}
+
+.contact a:hover {
+    text-decoration: underline;
+}
+
+/* Custom Cursor */
 .cursor {
-    width: 25px;
-    height: 25px;
-    background: radial-gradient(circle, #ffcc00 20%, transparent 70%); /* Glowing effect */
+    width: 15px;
+    height: 15px;
+    background: #00ddeb;
     border-radius: 50%;
     position: absolute;
     pointer-events: none;
     z-index: 1000;
-    box-shadow: 0 0 15px #ffcc00, 0 0 25px #ffcc00; /* Bright glow */
-    transition: transform 0.1s ease;
-    animation: pulse 1.5s infinite; /* Pulsing effect */
+    box-shadow: 0 0 10px #00ddeb, 0 0 20px #00ddeb;
+    transition: transform 0.1s ease, opacity 0.1s ease;
+    animation: pulse 1.5s infinite;
 }
 
-body {
-    cursor: none; /* Hide default cursor */
-}
-
-/* Pulsing animation for cursor */
 @keyframes pulse {
-    0%, 100% { transform: scale(1); opacity: 0.8; }
-    50% { transform: scale(1.2); opacity: 1; }
+    0%, 100% { transform: scale(1); opacity: 0.7; }
+    50% { transform: scale(1.3); opacity: 1; }
+}
+
+/* Responsive Design */
+@media (max-width: 600px) {
+    .hero h1 { font-size: 36px; }
+    .hero p { font-size: 18px; }
+    section { margin: 20px; padding: 15px; }
+    h2 { font-size: 24px; }
 }
