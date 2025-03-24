@@ -32,19 +32,44 @@ body {
     margin-bottom: 20px;
 }
 
-.resume-btn {
-    display: inline-block;
-    padding: 10px 20px;
-    background: #e94560;
-    color: #fff;
-    text-decoration: none;
-    border-radius: 5px;
-    transition: background 0.3s ease;
+.resume-buttons {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
 }
 
-.resume-btn:hover {
+.resume-btn {
+    display: inline-block;
+    padding: 12px 25px;
+    text-decoration: none;
+    border-radius: 5px;
+    font-weight: bold;
+    transition: all 0.3s ease;
+    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.5);
+}
+
+.preview-btn {
+    background: transparent;
+    color: #e94560;
+    border: 2px solid #e94560;
+}
+
+.preview-btn:hover {
+    background: #e94560;
+    color: #fff;
+    box-shadow: 0 0 10px rgba(233, 69, 96, 0.8);
+}
+
+.download-btn {
+    background: #e94560;
+    color: #fff;
+    border: none;
+}
+
+.download-btn:hover {
     background: #fff;
     color: #e94560;
+    box-shadow: 0 0 10px rgba(255, 255, 255, 0.8);
 }
 
 section {
@@ -200,4 +225,6 @@ p:hover, li:hover, h3:hover {
     section { margin: 20px; padding: 15px; }
     h2 { font-size: 24px; }
     .social-icon { width: 30px; height: 30px; }
+    .resume-buttons { flex-direction: column; gap: 10px; }
+    .resume-btn { padding: 10px 20px; }
 }
