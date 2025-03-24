@@ -6,15 +6,15 @@
 
 body {
     font-family: 'Arial', sans-serif;
-    background: linear-gradient(135deg, #1a1a2e, #16213e); /* Dark starry gradient */
+    background: linear-gradient(135deg, #1a1a2e, #16213e);
     color: #e0e0e0;
     line-height: 1.6;
-    cursor: none; /* Hide default cursor */
-    overflow-y: scroll; /* Normal scrolling */
+    cursor: none;
+    overflow-y: scroll;
 }
 
 .hero {
-    background: linear-gradient(135deg, #0f3460, #e94560); /* Red-blue gradient */
+    background: linear-gradient(135deg, #0f3460, #e94560);
     color: #fff;
     text-align: center;
     padding: 100px 20px;
@@ -35,14 +35,14 @@ section {
     max-width: 900px;
     margin: 40px auto;
     padding: 20px;
-    background: rgba(255, 255, 255, 0.05); /* Glassy effect */
+    background: rgba(255, 255, 255, 0.05);
     border-radius: 10px;
     box-shadow: 0 2px 15px rgba(0, 0, 0, 0.3);
     backdrop-filter: blur(5px);
 }
 
 h2 {
-    color: #e94560; /* Red accent */
+    color: #e94560;
     margin-bottom: 15px;
     font-size: 28px;
     text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.2);
@@ -62,7 +62,7 @@ ul li {
 }
 
 ul li:hover {
-    background: rgba(233, 69, 96, 0.3); /* Red glow */
+    background: rgba(233, 69, 96, 0.3);
     transform: translateX(10px);
 }
 
@@ -80,7 +80,7 @@ ul li:hover {
 }
 
 .project-card h3 {
-    color: #0f3460; /* Dark blue */
+    color: #0f3460;
     font-size: 20px;
 }
 
@@ -108,18 +108,18 @@ ul li:hover {
 .cursor-core {
     width: 12px;
     height: 12px;
-    background: #ffffff; /* White core */
+    background: #ffffff;
     border-radius: 50%;
     position: absolute;
     transform: translate(-50%, -50%);
-    box-shadow: 0 0 10px rgba(255, 255, 255, 0.8); /* Subtle glow */
+    box-shadow: 0 0 10px rgba(255, 255, 255, 0.8);
     animation: pulseCore 1s infinite ease-in-out;
 }
 
 .cursor-trail {
     width: 30px;
     height: 30px;
-    background: rgba(233, 69, 96, 0.3); /* Red trail */
+    background: rgba(233, 69, 96, 0.3);
     border-radius: 50%;
     position: absolute;
     transform: translate(-50%, -50%);
