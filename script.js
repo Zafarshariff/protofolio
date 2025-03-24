@@ -1,15 +1,17 @@
 document.addEventListener("mousemove", (e) => {
     const cursor = document.querySelector(".cursor");
-    cursor.style.left = e.pageX - 10 + "px"; /* Center 20px spider */
-    cursor.style.top = e.pageY - 10 + "px";
-    cursor.style.display = "block";
+    const core = document.querySelector(".cursor-core");
+    const trail = document.querySelector(".cursor-trail");
 
-    // Scroll page based on cursor Y position
-    const windowHeight = window.innerHeight;
-    const scrollRange = document.body.scrollHeight - windowHeight;
-    const cursorYPercent = e.pageY / windowHeight; // 0 to 1 based on cursor position
-    const scrollPosition = scrollRange * cursorYPercent;
-    window.scrollTo(0, scrollPosition); // Scroll page dynamically
+    // Position core instantly
+    core.style.left = e.pageX + "px";
+    core.style.top = e.pageY + "px";
+
+    // Trail follows with slight delay
+    trail.style.left = e.pageX + "px";
+    trail.style.top = e.pageY + "px";
+
+    cursor.style.display = "block";
 });
 
 document.addEventListener("mouseleave", () => {
