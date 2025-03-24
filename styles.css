@@ -1,23 +1,93 @@
 body {
     font-family: Arial, sans-serif;
-    margin: 20px;
-    line-height: 1.6;
-}
-header {
-    text-align: center;
-    background-color: #f0f0f0;
-    padding: 10px;
-}
-h1 {
     margin: 0;
+    padding: 0;
+    background: linear-gradient(45deg, #1a1a3d, #3d1a3d); /* Dark gradient background */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    overflow: hidden; /* Prevents scroll */
 }
+
+.folder-container {
+    perspective: 1200px; /* Deeper 3D effect */
+}
+
+.folder {
+    width: 450px;
+    background: linear-gradient(135deg, #ff6b6b, #4ecdc4, #45b7d1); /* Multi-color gradient */
+    border-radius: 15px;
+    box-shadow: 15px 15px 30px rgba(0, 0, 0, 0.5), inset 0 0 10px rgba(255, 255, 255, 0.2);
+    transform: rotateX(25deg) rotateY(-15deg); /* More pronounced 3D tilt */
+    transition: transform 0.5s ease, box-shadow 0.5s ease;
+    animation: float 4s infinite ease-in-out; /* Floating animation */
+}
+
+.folder:hover {
+    transform: rotateX(0deg) rotateY(0deg) scale(1.05); /* Zoom and flatten on hover */
+    box-shadow: 20px 20px 40px rgba(0, 0, 0, 0.7);
+}
+
+.folder-tab {
+    background: #fff;
+    padding: 15px 25px;
+    border-radius: 15px 15px 0 0;
+    font-size: 28px;
+    font-weight: bold;
+    text-align: center;
+    color: #ff6b6b;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+    transform: translateY(-10px); /* Slight lift */
+}
+
+.folder-content {
+    padding: 25px;
+    color: #fff;
+    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.3);
+}
+
 h2 {
-    color: #333;
+    color: #fff;
+    margin: 10px 0;
+    font-size: 22px;
 }
+
 ul {
-    list-style-type: square;
+    list-style-type: disc;
     padding-left: 20px;
 }
-section {
-    margin: 20px 0;
+
+p {
+    margin: 5px 0;
+}
+
+/* Floating animation */
+@keyframes float {
+    0%, 100% { transform: rotateX(25deg) rotateY(-15deg) translateY(0); }
+    50% { transform: rotateX(25deg) rotateY(-15deg) translateY(-20px); }
+}
+
+/* Cursor styling */
+.cursor {
+    width: 25px;
+    height: 25px;
+    background: radial-gradient(circle, #ffcc00 20%, transparent 70%); /* Glowing effect */
+    border-radius: 50%;
+    position: absolute;
+    pointer-events: none;
+    z-index: 1000;
+    box-shadow: 0 0 15px #ffcc00, 0 0 25px #ffcc00; /* Bright glow */
+    transition: transform 0.1s ease;
+    animation: pulse 1.5s infinite; /* Pulsing effect */
+}
+
+body {
+    cursor: none; /* Hide default cursor */
+}
+
+/* Pulsing animation for cursor */
+@keyframes pulse {
+    0%, 100% { transform: scale(1); opacity: 0.8; }
+    50% { transform: scale(1.2); opacity: 1; }
 }
