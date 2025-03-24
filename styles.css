@@ -9,8 +9,8 @@ body {
     background: linear-gradient(135deg, #1a1a2e, #16213e); /* Dark starry gradient */
     color: #e0e0e0;
     line-height: 1.6;
-    scroll-behavior: smooth;
     cursor: none; /* Hide default cursor */
+    overflow-y: auto; /* Ensure scrolling works */
 }
 
 .hero {
@@ -98,38 +98,15 @@ ul li:hover {
     color: #fff;
 }
 
-/* White Spider Cursor */
+/* White Spider Cursor - No Glow */
 .cursor {
-    font-size: 16px; /* Smaller, sleeker spider */
-    color: #ffffff; /* White spider */
+    font-size: 16px; /* Sleek size */
+    color: #ffffff; /* Pure white spider */
     position: absolute;
     pointer-events: none;
     z-index: 1000;
-    text-shadow: 0 0 8px #ffffff, 0 0 15px #e94560; /* White glow with red halo */
-    animation: spiderCrawl 0.4s infinite alternate; /* Subtle crawl effect */
+    animation: spiderCrawl 0.4s infinite alternate; /* Subtle crawl */
 }
 
 /* Spider crawl animation */
-@keyframes spiderCrawl {
-    0% { transform: translateY(0) rotate(3deg); }
-    100% { transform: translateY(-3px) rotate(-3deg); }
-}
-
-/* Highlight Words on Hover */
-p, li, h3 {
-    position: relative;
-    transition: color 0.2s ease, text-shadow 0.2s ease;
-}
-
-p:hover, li:hover, h3:hover {
-    color: #fff; /* Brightens text */
-    text-shadow: 0 0 5px #e94560; /* Red glow */
-}
-
-/* Responsive Design */
-@media (max-width: 600px) {
-    .hero h1 { font-size: 36px; }
-    .hero p { font-size: 18px; }
-    section { margin: 20px; padding: 15px; }
-    h2 { font-size: 24px; }
-}
+@keyframes spide
