@@ -6,7 +6,7 @@
 
 body {
     font-family: 'Arial', sans-serif;
-    background: linear-gradient(135deg, #1a1a2e, #16213e); /* Dark, starry gradient */
+    background: linear-gradient(135deg, #1a1a2e, #16213e); /* Dark starry gradient */
     color: #e0e0e0;
     line-height: 1.6;
     scroll-behavior: smooth;
@@ -35,14 +35,14 @@ section {
     max-width: 900px;
     margin: 40px auto;
     padding: 20px;
-    background: rgba(255, 255, 255, 0.05); /* Subtle glass effect */
+    background: rgba(255, 255, 255, 0.05); /* Glassy effect */
     border-radius: 10px;
     box-shadow: 0 2px 15px rgba(0, 0, 0, 0.3);
-    backdrop-filter: blur(5px); /* Glassy blur */
+    backdrop-filter: blur(5px);
 }
 
 h2 {
-    color: #e94560; /* Vibrant red accent */
+    color: #e94560; /* Red accent */
     margin-bottom: 15px;
     font-size: 28px;
     text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.2);
@@ -62,7 +62,7 @@ ul li {
 }
 
 ul li:hover {
-    background: rgba(233, 69, 96, 0.3); /* Red glow on hover */
+    background: rgba(233, 69, 96, 0.3); /* Red glow */
     transform: translateX(10px);
 }
 
@@ -98,34 +98,32 @@ ul li:hover {
     color: #fff;
 }
 
-/* Custom Cursor */
+/* Spider Cursor */
 .cursor {
-    width: 15px;
-    height: 15px;
-    background: #e94560; /* Matches red accent */
-    border-radius: 50%;
+    font-size: 20px; /* Size of spider emoji */
+    color: #e94560; /* Matches red accent */
     position: absolute;
     pointer-events: none;
     z-index: 1000;
-    box-shadow: 0 0 10px #e94560, 0 0 20px #e94560;
-    transition: transform 0.1s ease, opacity 0.1s ease;
-    animation: pulse 1.5s infinite;
+    text-shadow: 0 0 10px #e94560; /* Glow effect */
+    animation: spiderWiggle 0.5s infinite alternate; /* Leg wiggle */
 }
 
-@keyframes pulse {
-    0%, 100% { transform: scale(1); opacity: 0.7; }
-    50% { transform: scale(1.3); opacity: 1; }
+/* Spider wiggle animation */
+@keyframes spiderWiggle {
+    0% { transform: translateY(0) rotate(5deg); }
+    100% { transform: translateY(-5px) rotate(-5deg); }
 }
 
 /* Highlight Words on Hover */
 p, li, h3 {
     position: relative;
-    transition: color 0.2s ease;
+    transition: color 0.2s ease, text-shadow 0.2s ease;
 }
 
 p:hover, li:hover, h3:hover {
     color: #fff; /* Brightens text */
-    text-shadow: 0 0 5px #e94560; /* Subtle glow */
+    text-shadow: 0 0 5px #e94560; /* Red glow */
 }
 
 /* Responsive Design */
