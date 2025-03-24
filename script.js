@@ -1,7 +1,7 @@
 document.addEventListener("mousemove", (e) => {
     const cursor = document.querySelector(".cursor");
-    cursor.style.left = e.pageX - 8 + "px"; /* Center 16px spider */
-    cursor.style.top = e.pageY - 8 + "px";
+    cursor.style.left = e.pageX - 10 + "px"; /* Center 20px spider */
+    cursor.style.top = e.pageY - 10 + "px";
     cursor.style.display = "block";
 
     // Scroll page based on cursor Y position
