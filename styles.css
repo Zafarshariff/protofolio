@@ -98,21 +98,21 @@ ul li:hover {
     color: #fff;
 }
 
-/* Spider Cursor */
+/* White Spider Cursor */
 .cursor {
-    font-size: 20px; /* Size of spider emoji */
-    color: #e94560; /* Matches red accent */
+    font-size: 16px; /* Smaller, sleeker spider */
+    color: #ffffff; /* White spider */
     position: absolute;
     pointer-events: none;
     z-index: 1000;
-    text-shadow: 0 0 10px #e94560; /* Glow effect */
-    animation: spiderWiggle 0.5s infinite alternate; /* Leg wiggle */
+    text-shadow: 0 0 8px #ffffff, 0 0 15px #e94560; /* White glow with red halo */
+    animation: spiderCrawl 0.4s infinite alternate; /* Subtle crawl effect */
 }
 
-/* Spider wiggle animation */
-@keyframes spiderWiggle {
-    0% { transform: translateY(0) rotate(5deg); }
-    100% { transform: translateY(-5px) rotate(-5deg); }
+/* Spider crawl animation */
+@keyframes spiderCrawl {
+    0% { transform: translateY(0) rotate(3deg); }
+    100% { transform: translateY(-3px) rotate(-3deg); }
 }
 
 /* Highlight Words on Hover */
